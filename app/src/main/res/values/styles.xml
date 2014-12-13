@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/GreenActionBar</item>
+        <item name="actionBarStyle">@style/GreenActionBar</item>
+        <item name="android:windowAnimationStyle">@style/anim_activity</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="GreenActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/light_green</item>
+        <item name="android:titleTextStyle">@style/GreenActionBarTitleText</item>
+        <item name="android:backgroundStacked">@android:color/holo_green_dark</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/light_green</item>
+        <item name="titleTextStyle">@style/GreenActionBarTitleText</item>
+        <item name="backgroundStacked">@android:color/holo_green_dark</item>
+    </style>
+    <style name="GreenActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="anim_activity" mce_bogus="1" parent="@android:style/Animation.Translucent">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_in_anim</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_out_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_in_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_out_anim</item>
+    </style>
+</resources>

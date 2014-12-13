@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/avoscloud-v2.6.8.2.jar')
+    compile files('libs/fastjson.jar')
+    compile files('libs/httpmime-4.2.4.jar')
+    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile 'org.androidannotations:androidannotations:3.2'
+    compile 'com.timehop.stickyheadersrecyclerview:library:0.3.3'
+    compile 'com.android.support:recyclerview-v7:21.0.2'
+    compile files('libs/easyandroidanimationslibrary-v0.5.jar')
+    compile project(':SwipeBackLayoutLibrary')
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        resourcePackageName 'com.android.tom.wtb'
+
+        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
+        // resourcePackageName android.defaultConfig.packageName
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}
+
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.android.tom.wtb"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+}

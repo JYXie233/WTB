@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="gray">#d1d1d1</color>
+    <color name="FFFFCC">#FFFFCC</color>
+    <color name="CCFFFF">#CCFFFF</color>
+    <color name="FFCCCC">#FFCCCC</color>
+    <color name="light_green">#99CC99</color>
+    <array name="gplus_colors">
+        <item >@color/FFFFCC</item>
+        <item >@color/CCFFFF</item>
+        <item >@color/FFCCCC</item>
+    </array>
+</resources>
